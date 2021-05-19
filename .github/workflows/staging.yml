@@ -17,21 +17,21 @@ jobs:
         else
           echo ::set-output name=aws_env_prefix::prod
         fi
-      - name: Setup node
-        uses: actions/setup-node@v1
-        with: 
-            node-version: '10.x'
-      - uses: actions/checkout@master
-      - name: Deploy to s3
-        env: 
-            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            AWS_DEFAULT_REGION: us-east-1
-        run: |
-          aws s3 sync "advisory opinions" "s3://${{ steps.global-vars.outputs.aws_env_prefix }}-phila-gov-website-s3/ethicsboard/advisory opinions/" --delete 
-          aws s3 sync "settlement agreements" "s3://${{ steps.global-vars.outputs.aws_env_prefix }}-phila-gov-website-s3/ethicsboard/settlement agreements/" --delete 
-          if [[ ${{ github.ref}} = refs/heads/staging ]];then
-            aws cloudfront create-invalidation --distribution-id ${{ secrets.CF_INVALIDATE_STAGE }} --paths "/*"
-          else
-            aws cloudfront create-invalidation --distribution-id ${{ secrets.CF_INVALIDATE_PROD }} --paths "/*"
-          fi
+    - name: Setup node
+      uses: actions/setup-node@v1
+      with: 
+          node-version: '10.x'
+    - uses: actions/checkout@master
+    - name: Deploy to s3
+      env: 
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: us-east-1
+      run: |
+        aws s3 sync "advisory opinions" "s3://${{ steps.global-vars.outputs.aws_env_prefix }}-phila-gov-website-s3/ethicsboard/advisory opinions/" --delete 
+        aws s3 sync "settlement agreements" "s3://${{ steps.global-vars.outputs.aws_env_prefix }}-phila-gov-website-s3/ethicsboard/settlement agreements/" --delete 
+        if [[ ${{ github.ref}} = refs/heads/staging ]];then
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.CF_INVALIDATE_STAGE }} --paths "/*"
+        else
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.CF_INVALIDATE_PROD }} --paths "/*"
+        fi
