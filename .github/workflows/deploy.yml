@@ -1,8 +1,9 @@
-name: Deploy staging to s3
+name: Deploy to s3
 on:
   push:
     branches:
       - staging
+      - main
 jobs:
   build:
     name: Build files
@@ -30,7 +31,7 @@ jobs:
       run: |
         aws s3 sync "advisory opinions" "s3://${{ steps.global-vars.outputs.aws_env_prefix }}-phila-gov-website-s3/ethicsboard/advisory opinions/" --delete 
         aws s3 sync "settlement agreements" "s3://${{ steps.global-vars.outputs.aws_env_prefix }}-phila-gov-website-s3/ethicsboard/settlement agreements/" --delete 
-        if [[ ${{ github.ref}} = refs/heads/staging ]];then
+        if [[ ${{ github.ref }} = refs/heads/staging ]];then
           aws cloudfront create-invalidation --distribution-id ${{ secrets.CF_INVALIDATE_STAGE }} --paths "/*"
         else
           aws cloudfront create-invalidation --distribution-id ${{ secrets.CF_INVALIDATE_PROD }} --paths "/*"
