@@ -11,7 +11,7 @@ The Board of Ethics uses a series of interconnected PDFs to manage documents thr
 3. Merge pull request to publish file(s). 
 
 
-Github is a tool that allows for version management of documents. We will be utilizing this tool for handling documents for both OHR and BOE at the following links:
+Github is a tool that allows for version management of documents. We will be utilizing this tool for handling documents for BOE at the following link:
 
 https://github.com/CityOfPhiladelphia/phila.gov-boe-aws-deploy/
 
