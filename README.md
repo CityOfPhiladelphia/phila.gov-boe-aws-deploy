@@ -38,8 +38,6 @@ In order to delete a file, navigate to the file in the folder structure and clic
 
 From this view, click the trash icon on the right. This will create a new commit to the branch. Click “Commit changes” to confirm deleting the file from the branch.
 
-![image5](https://user-images.githubusercontent.com/16737142/123292926-84762f00-d4e1-11eb-877a-8d7be4ea164d.png)
-
 After the file has been deleted, make sure to follow the instructions at “Merge into main” to apply to production.
 
 ## Modify file
@@ -48,9 +46,14 @@ Follow the instructions in “Upload file”. Rather than adding a new file, the
 
 ## Merge into main
 
-In order to copy your files from staging to production, you will need to create and merge a pull request. To start, click on the “Pull requests” tab from your repository home page.
+In order to copy your files from staging to production, you will need to create and merge a pull request. To start, click on the “Pull requests” tab from your 
+repository home page.
+
+![image5](https://user-images.githubusercontent.com/16737142/123292926-84762f00-d4e1-11eb-877a-8d7be4ea164d.png)
 
 From this page, click on the “new pull request” button on the top right of the page, which will bring you to the “Compare changes” page.
+
+![image10](https://user-images.githubusercontent.com/16737142/123294660-0c106d80-d4e3-11eb-85c5-75c54237153e.png)
 
 From here, you will set the “base” branch (the branch that will be modified), and the “compare” branch (the branch with the changes that will apply to the base branch). For this use case, set the base branch to “main” and allow the compare branch to remain “staging”. You should then see any commit messages that have not been merged below.
 
