@@ -26,7 +26,7 @@ After confirming the environment, simply drag and drop your file(s) onto the pag
 
 At this point, the commit is now confirmed in the staging environment, as indicated by the status on the home page.
 
-![image3](https://user-images.githubusercontent.com/16737142/123292850-732d2280-d4e1-11eb-9077-6e9d57220a94.png)
+![image11](https://user-images.githubusercontent.com/16737142/123294936-4843ce00-d4e3-11eb-9a1d-31e35871abe7.png)
 
 The file(s) will now be made available at the staging url associated with your repository. Navigate to the “Merge into main” section to copy the file(s) from staging to production.
 
@@ -34,9 +34,11 @@ The file(s) will now be made available at the staging url associated with your r
 
 In order to delete a file, navigate to the file in the folder structure and click on the file link.
 
-![image4](https://user-images.githubusercontent.com/16737142/123292884-7a543080-d4e1-11eb-9fb0-19475d0a1e5e.png)
+![image3](https://user-images.githubusercontent.com/16737142/123292850-732d2280-d4e1-11eb-9077-6e9d57220a94.png)
 
 From this view, click the trash icon on the right. This will create a new commit to the branch. Click “Commit changes” to confirm deleting the file from the branch.
+
+![image4](https://user-images.githubusercontent.com/16737142/123292884-7a543080-d4e1-11eb-9fb0-19475d0a1e5e.png)
 
 After the file has been deleted, make sure to follow the instructions at “Merge into main” to apply to production.
 
