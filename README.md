@@ -50,24 +50,24 @@ Follow the instructions in “Upload file”. Rather than adding a new file, the
 
 In order to copy your files from staging to production, you will need to create and merge a pull request. To start, click on the “Pull requests” tab from your repository home page.
 
-![image6](https://user-images.githubusercontent.com/16737142/123292985-9061f100-d4e1-11eb-9e71-7ae9c91b502a.png)
-
 From this page, click on the “new pull request” button on the top right of the page, which will bring you to the “Compare changes” page.
-
-![image7](https://user-images.githubusercontent.com/16737142/123293000-9657d200-d4e1-11eb-927e-2c9769f46023.png)
 
 From here, you will set the “base” branch (the branch that will be modified), and the “compare” branch (the branch with the changes that will apply to the base branch). For this use case, set the base branch to “main” and allow the compare branch to remain “staging”. You should then see any commit messages that have not been merged below.
 
-![image8](https://user-images.githubusercontent.com/16737142/123293024-9eb00d00-d4e1-11eb-8aa6-f6cc07eb6e34.png)
+![image6](https://user-images.githubusercontent.com/16737142/123292985-9061f100-d4e1-11eb-9e71-7ae9c91b502a.png)
 
 If the commit list looks accurate, click the “Create pull request” button and click it again in the 
 “Open a pull request” page.
 
-![image9](https://user-images.githubusercontent.com/16737142/123293045-a374c100-d4e1-11eb-8d60-ad4ba39ef38f.png)
+![image7](https://user-images.githubusercontent.com/16737142/123293000-9657d200-d4e1-11eb-927e-2c9769f46023.png)
 
 At this point, a “pull request” (a request to modify one branch from another) has been created, but has not applied to the base branch. In order to apply the change, click the “Merge pull request” button.
 
+![image8](https://user-images.githubusercontent.com/16737142/123293024-9eb00d00-d4e1-11eb-8aa6-f6cc07eb6e34.png)
+
 Lastly, you will need to confirm the merge with the “Confirm merge” button.
+
+![image9](https://user-images.githubusercontent.com/16737142/123293045-a374c100-d4e1-11eb-8d60-ad4ba39ef38f.png)
 
 ## Review files on staging
 
